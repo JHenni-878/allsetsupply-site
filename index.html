@@ -15,8 +15,8 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230A1220'/%3E%3Cpath d='M6.5 6.5h19v19h-19z' fill='none' stroke='%23B9CBE4' stroke-width='1.8'/%3E%3Cpath d='M11 21.5 16 9.8 21 21.5' fill='none' stroke='%23E9EEF6' stroke-width='2.3' stroke-linecap='square' stroke-linejoin='miter'/%3E%3Cpath d='M13.1 17h5.8' stroke='%237DA2D1' stroke-width='2.3'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -24,6 +24,7 @@
   "name": "AllSet Supply",
   "legalName": "AllSet Supply LLC",
   "url": "https://allsetsupply.co",
+  "logo": "https://allsetsupply.co/logo-wordmark.png",
   "email": "jude@allsetsupply.co",
   "description": "US-based product distribution and sourcing company. Texas limited liability company, owner-operated. Volume sourcing, brokered procurement, and retail and e-commerce distribution, with fulfillment locations in Houston, Texas and Pennsylvania.",
   "areaServed": "US",
@@ -133,10 +134,7 @@ img,svg{max-width:100%;display:block}
 #nav.scrolled{background:rgba(9,16,28,.92);border-bottom-color:var(--line);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px)}
 .nav-in{max-width:1120px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:28px;height:68px;position:relative}
 .brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
-.brand .mark{width:32px;height:32px;flex:0 0 auto}
-.brand-text{display:flex;flex-direction:column;line-height:1}
-.brand-name{color:var(--ink);font-family:var(--sans);font-weight:800;font-size:15px;letter-spacing:.13em}
-.brand-sub{color:var(--acc);font-family:var(--mono);font-weight:600;font-size:11px;letter-spacing:.32em;margin-top:3px}
+.brand .logo-img{height:38px;width:auto;display:block}
 .links{display:flex;align-items:center;gap:26px;margin-left:auto}
 .links a{
   font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
@@ -277,6 +275,13 @@ h2{font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:800;margin-bottom:18px}
 }
 .cap-note::before{content:"";width:22px;height:1px;background:var(--acc);flex:0 0 auto}
 .cap-honest{margin-top:16px;color:var(--mut);font-size:15.5px;max-width:64ch}
+.lines{margin-top:38px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:28px 4px;text-align:center}
+.lines-k{font-family:var(--mono);font-size:11.5px;letter-spacing:.22em;color:var(--acc);margin-bottom:16px}
+.lines-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;column-gap:clamp(24px,4.5vw,52px);row-gap:12px;list-style:none;margin:0;padding:0}
+.lines-row li{font-weight:800;font-size:clamp(17px,2.5vw,27px);letter-spacing:.13em;color:var(--ink);white-space:nowrap}
+.lines-sub{margin-top:16px;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--dim)}
+.bd-cta{margin-top:34px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.bd-note{color:var(--dim);font-size:14px}
 
 /* ============ PROCESS ============ */
 .steps{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:56px;list-style:none}
@@ -367,9 +372,7 @@ footer{border-top:1px solid var(--line);padding:36px 0 44px;background:rgba(9,16
   max-width:1120px;margin:0 auto;padding:0 24px;
   display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;
 }
-.foot-in .brand .mark{width:26px;height:26px}
-.foot-in .brand-name{font-size:13px}
-.foot-in .brand-sub{font-size:9.5px;letter-spacing:.32em}
+.foot-in .brand .logo-img{height:30px}
 .foot-c{font-size:15.5px;color:var(--mut)}
 .foot-m{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
 
@@ -513,18 +516,7 @@ footer{border-top:1px solid var(--line);padding:36px 0 44px;background:rgba(9,16
 <header id="nav">
   <div class="nav-in">
     <a class="brand" href="#top" aria-label="AllSet Supply — home">
-      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-        <g fill="none" stroke-linecap="square" stroke-linejoin="miter">
-          <path d="M2 9V2h7M23 2h7v7M30 23v7h-7M9 30H2v-7" stroke="#7DA2D1" stroke-width="1.6"/>
-          <path d="M6 6h20v20H6z" stroke="#B9CBE4" stroke-width="1.7"/>
-          <path d="M10.6 22.4 16 9.6l5.4 12.8" stroke="#E9EEF6" stroke-width="2"/>
-          <path d="M12.9 17.4h6.2" stroke="#7DA2D1" stroke-width="2"/>
-        </g>
-      </svg>
-      <span class="brand-text">
-        <span class="brand-name">ALLSET</span>
-        <span class="brand-sub">SUPPLY</span>
-      </span>
+      <img class="logo-img" src="logo-wordmark.png" alt="" width="480" height="139" decoding="async">
     </a>
     <button class="burger" id="nav-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu">
       <i></i><i></i><i></i>
@@ -532,6 +524,7 @@ footer{border-top:1px solid var(--line);padding:36px 0 44px;background:rgba(9,16
     <nav class="links" id="menu" aria-label="Primary">
       <a href="#capabilities">Capabilities</a>
       <a href="#process">Process</a>
+      <a href="#brands">Brand Direct</a>
       <a href="#company">Company</a>
       <a href="#contact">Contact</a>
       <a class="btn-p" href="mailto:jude@allsetsupply.co?subject=Quote%20Request&amp;body=Product%3A%0AQuantity%3A%0ADelivery%20location%3A%0ATimeline%3A%0A">Request a Quote</a>
@@ -546,7 +539,7 @@ footer{border-top:1px solid var(--line);padding:36px 0 44px;background:rgba(9,16
 <section class="hero" id="top" aria-labelledby="hero-h">
   <div class="wrap">
     <div class="sheethead rv" aria-hidden="true">
-      <span class="sh-l">SHT 01 / 05 · GENERAL ARRANGEMENT</span>
+      <span class="sh-l">SHT 01 / 06 · GENERAL ARRANGEMENT</span>
       <span class="rule"></span>
       <span class="sh-r">DWG NO. AS-01 · SCALE NTS · REV A</span>
     </div>
@@ -661,7 +654,7 @@ footer{border-top:1px solid var(--line);padding:36px 0 44px;background:rgba(9,16
 <section id="capabilities" aria-labelledby="cap-h">
   <div class="wrap">
     <div class="sheethead rv" aria-hidden="true">
-      <span class="sh-l">SHT 02 / 05 · CAPABILITIES</span>
+      <span class="sh-l">SHT 02 / 06 · CAPABILITIES</span>
       <span class="rule"></span>
       <span class="sh-r">DWG NO. AS-02 · REV A</span>
     </div>
@@ -686,12 +679,17 @@ footer{border-top:1px solid var(--line);padding:36px 0 44px;background:rgba(9,16
         <span class="cx" aria-hidden="true"></span>
         <span class="tag" aria-hidden="true">C-03</span>
         <h3>Retail &amp; E-Commerce Distribution</h3>
-        <p>Active seller on major e-commerce marketplaces and retail channels — thousands of units moved every month.</p>
+        <p>Active seller across marketplace and retail channels — our Amazon storefront is the primary engine, moving thousands of units every month.</p>
         <p class="foot">Regions: Houston, TX · PA</p>
       </article>
     </div>
-    <p class="cap-note rv">Product experience: consumer electronics · connectivity &amp; communications hardware · tools &amp; equipment</p>
-    <p class="cap-note rv">Brands moved: Ryobi · RIDGID · Craftsman · Square D · Eaton · other tool &amp; electrical lines</p>
+    <div class="lines rv">
+      <p class="lines-k">LINES REGULARLY SOURCED &amp; MOVED</p>
+      <ul class="lines-row">
+        <li>RYOBI</li><li>RIDGID</li><li>CRAFTSMAN</li><li>SQUARE&nbsp;D</li><li>EATON</li>
+      </ul>
+      <p class="lines-sub">+ other tool &amp; electrical lines · consumer electronics · connectivity hardware · via retail &amp; distribution channels</p>
+    </div>
     <p class="cap-honest rv">If your requirement sits outside those lanes, we'll tell you before we quote.</p>
   </div>
 </section>
@@ -700,7 +698,7 @@ footer{border-top:1px solid var(--line);padding:36px 0 44px;background:rgba(9,16
 <section id="process" aria-labelledby="proc-h">
   <div class="wrap">
     <div class="sheethead rv" aria-hidden="true">
-      <span class="sh-l">SHT 03 / 05 · SEQUENCE OF OPERATIONS</span>
+      <span class="sh-l">SHT 03 / 06 · SEQUENCE OF OPERATIONS</span>
       <span class="rule"></span>
       <span class="sh-r">DWG NO. AS-03 · REV A</span>
     </div>
@@ -733,20 +731,58 @@ footer{border-top:1px solid var(--line);padding:36px 0 44px;background:rgba(9,16
   </div>
 </section>
 
-<!-- ===== COMPANY · SHT 04 ===== -->
+
+<!-- ===== BRAND DIRECT · SHT 04 ===== -->
+<section id="brands" aria-labelledby="bd-h">
+  <div class="wrap">
+    <div class="sheethead rv" aria-hidden="true">
+      <span class="sh-l">SHT 04 / 06 · BRAND DIRECT</span>
+      <span class="rule"></span>
+      <span class="sh-r">DWG NO. AS-04 · REV A</span>
+    </div>
+    <h2 class="rv" id="bd-h">Sell it to us. We do the rest.</h2>
+    <p class="sub rv">For brands and distributors with inventory to move: we buy outright and run the entire marketplace channel — primarily our Amazon storefront.</p>
+    <div class="cards">
+      <article class="card rv">
+        <p class="tag" aria-hidden="true">B&#8211;01</p>
+        <h3>You sell it once</h3>
+        <p>We purchase in bulk, upfront. Your inventory is sold the day it ships — no consignment, no waiting on sell&#8209;through, no chargebacks.</p>
+        <p class="foot" aria-hidden="true">Terms: bulk PO · paid upfront</p>
+      </article>
+      <article class="card rv">
+        <p class="tag" aria-hidden="true">B&#8211;02</p>
+        <h3>We run the channel</h3>
+        <p>Listing, content, pricing, fulfillment, returns, customer service — handled end to end on our Amazon storefront. You never touch a seller dashboard.</p>
+        <p class="foot" aria-hidden="true">Scope: full marketplace operation</p>
+      </article>
+      <article class="card rv">
+        <p class="tag" aria-hidden="true">B&#8211;03</p>
+        <h3>Your rules hold</h3>
+        <p>MAP pricing and channel restrictions are respected to the letter, and you deal with one person — the owner — from first call to reorder.</p>
+        <p class="foot" aria-hidden="true">Contact: principal-direct</p>
+      </article>
+    </div>
+    <p class="bd-cta rv">
+      <a class="btn-p" href="mailto:jude@allsetsupply.co?subject=Brand%20Direct%20Inquiry&amp;body=Brand%3A%0AProduct%20line%3A%0AUnits%20available%3A%0AMAP%20or%20channel%20rules%3A%0A">Talk Brand Direct</a>
+      <span class="bd-note">Moving product for a brand starts with one email.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ===== COMPANY · SHT 05 ===== -->
 <section id="company" aria-labelledby="co-h">
   <div class="wrap">
     <div class="sheethead rv" aria-hidden="true">
-      <span class="sh-l">SHT 04 / 05 · RECORD OF ENTITY</span>
+      <span class="sh-l">SHT 05 / 06 · RECORD OF ENTITY</span>
       <span class="rule"></span>
-      <span class="sh-r">DWG NO. AS-04 · REV A</span>
+      <span class="sh-r">DWG NO. AS-05 · REV A</span>
     </div>
     <h2 id="co-h" class="rv">The company.</h2>
     <p class="sub rv d2">The entity of record — Texas-registered, owner-operated, US-based.</p>
     <div class="about-grid">
       <div class="prose rv d2">
         <p><strong>AllSet Supply LLC is a Texas limited liability company</strong> — a US-based product distribution and sourcing operation, owner-operated end to end. When you contact AllSet Supply, you are dealing with the owner, not a hand-off.</p>
-        <p>We sell on major e-commerce marketplaces and retail channels, and we run brokered procurement for commercial and wholesale buyers — purchase orders, one-time volume buys, and recurring supply programs.</p>
+        <p>We sell primarily through our Amazon storefront — alongside other marketplace and retail channels, and we run brokered procurement for commercial and wholesale buyers — purchase orders, one-time volume buys, and recurring supply programs.</p>
         <p>Fulfillment ships from two US regions — <strong>Houston, Texas and Pennsylvania</strong> — through a fulfillment partner network. Product experience runs through consumer electronics, connectivity and communications hardware, and tools and equipment — brand-name lines like Ryobi, RIDGID, Craftsman, Square D, and Eaton.</p>
         <blockquote class="pull">
           <p>&ldquo;We quote only what we can deliver.&rdquo;</p>
@@ -760,7 +796,7 @@ footer{border-top:1px solid var(--line);padding:36px 0 44px;background:rgba(9,16
           <div class="row"><dt>Entity</dt><dd>Texas limited liability company</dd></div>
           <div class="row"><dt>Principal</dt><dd>Jude Hennigan — Owner</dd></div>
           <div class="row"><dt>Fulfillment</dt><dd>Houston, TX · Pennsylvania<small>via fulfillment partner network</small></dd></div>
-          <div class="row"><dt>Channels</dt><dd>Major e-commerce marketplaces · retail</dd></div>
+          <div class="row"><dt>Channels</dt><dd>Amazon storefront (primary) · other marketplaces · retail</dd></div>
           <div class="row"><dt>Experience</dt><dd>Consumer electronics · connectivity &amp; communications hardware · tools &amp; equipment</dd></div>
           <div class="row"><dt>Brands moved</dt><dd>Ryobi · RIDGID · Craftsman · Square D · Eaton · others</dd></div>
           <div class="row"><dt>Volume</dt><dd>Thousands of units moved monthly</dd></div>
@@ -833,13 +869,13 @@ footer{border-top:1px solid var(--line);padding:36px 0 44px;background:rgba(9,16
   </div>
 </section>
 
-<!-- ===== CONTACT · SHT 05 ===== -->
+<!-- ===== CONTACT · SHT 06 ===== -->
 <section id="contact" aria-labelledby="ct-h">
   <div class="wrap">
     <div class="sheethead rv" aria-hidden="true">
-      <span class="sh-l">SHT 05 / 05 · CONTACT</span>
+      <span class="sh-l">SHT 06 / 06 · CONTACT</span>
       <span class="rule"></span>
-      <span class="sh-r">DWG NO. AS-05 · REV A</span>
+      <span class="sh-r">DWG NO. AS-06 · REV A</span>
     </div>
     <div class="contact-plate rv">
       <span class="cx tl" aria-hidden="true"></span><span class="cx tr" aria-hidden="true"></span>
@@ -865,22 +901,11 @@ footer{border-top:1px solid var(--line);padding:36px 0 44px;background:rgba(9,16
 <footer>
   <div class="foot-in">
     <a class="brand" href="#top" aria-label="AllSet Supply — back to top">
-      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-        <g fill="none" stroke-linecap="square" stroke-linejoin="miter">
-          <path d="M2 9V2h7M23 2h7v7M30 23v7h-7M9 30H2v-7" stroke="#7DA2D1" stroke-width="1.6"/>
-          <path d="M6 6h20v20H6z" stroke="#B9CBE4" stroke-width="1.7"/>
-          <path d="M10.6 22.4 16 9.6l5.4 12.8" stroke="#E9EEF6" stroke-width="2"/>
-          <path d="M12.9 17.4h6.2" stroke="#7DA2D1" stroke-width="2"/>
-        </g>
-      </svg>
-      <span class="brand-text">
-        <span class="brand-name">ALLSET</span>
-        <span class="brand-sub">SUPPLY</span>
-      </span>
+      <img class="logo-img" src="logo-wordmark.png" alt="" width="480" height="139" decoding="async">
     </a>
     <p class="foot-c">© 2026 AllSet Supply LLC · United States</p>
     <p class="foot-c" style="font-size:12px;opacity:.75">Independent reseller. All product and brand names are trademarks of their respective owners.</p>
-    <p class="foot-m" aria-hidden="true">SHT 05 / 05 · End of set</p>
+    <p class="foot-m" aria-hidden="true">SHT 06 / 06 · End of set</p>
   </div>
 </footer>
 
