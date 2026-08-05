@@ -11,7 +11,7 @@
 <meta property="og:description" content="New, sealed, never-activated Starlink Mini kits. Single units and volume orders with commercial invoicing. Houston, TX.">
 <meta property="og:url" content="https://allsetsupply.co/starlink.html">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://allsetsupply.co/starlink-box.jpg">
+<meta property="og:image" content="https://allsetsupply.co/mini-kit.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
@@ -282,14 +282,17 @@ html.js.anim .rv.d4{transition-delay:.18s}
 }
 </style>
 <style>
-.sl-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:center}
-@media(max-width:820px){.sl-grid{grid-template-columns:1fr}}
-.sl-pics{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.sl-pics img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);background:#fff}
+.sl-products{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:34px}
+@media(max-width:760px){.sl-products{grid-template-columns:1fr}}
+.sl-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 22px;text-align:center}
+.sl-card img{width:100%;max-width:420px;height:auto;margin:0 auto 8px;display:block}
+.sl-card h3{font-size:19px;margin:4px 0 6px}
+.sl-desc{color:var(--mut);font-size:14.5px;line-height:1.5;margin-bottom:10px}
+.price-line{font-size:21px;font-weight:800;color:var(--ink)}
+.price-line span{color:#35659B}
+.sl-vol{color:var(--mut);font-size:13.5px;margin-top:2px}
 .form-wrap{background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px;max-width:760px;margin:0 auto}
 .form-wrap iframe{width:100%;border:0;min-height:1500px}
-.price-line{font-size:22px;font-weight:800;color:var(--ink)}
-.price-line span{color:#35659B}
 </style>
 </head>
 <body>
@@ -307,8 +310,7 @@ html.js.anim .rv.d4{transition-delay:.18s}
       <a href="#order">Order</a>
       <a href="marine.html">Marine &amp; Off-Grid</a>
       <a href="index.html#company">Company</a>
-      <a href="index.html#contact">Contact</a>
-      <a class="btn" href="#order">Request Units</a>
+      <a class="btn" href="index.html#contact">Contact Us</a>
     </nav>
   </div>
 </header>
@@ -317,27 +319,34 @@ html.js.anim .rv.d4{transition-delay:.18s}
 
 <section class="hero" id="top" aria-labelledby="hero-h">
   <div class="wrap">
-    <div class="sl-grid">
-      <div>
-        <p class="eyebrow">Starlink Orders</p>
-        <h1 id="hero-h">Starlink Mini kits. <span class="hl">Sealed. Never activated.</span></h1>
-        <p class="lead">New retail-channel units that activate fresh on YOUR account — no transfers, no prior owners. Stores are selling out everywhere; we keep supply moving. Single units or volume, pickup in Houston or shipped nationwide.</p>
-        <p class="price-line">Single unit $349.99 · <span>volume pricing on request</span></p>
-        <div class="cta-row">
-          <a class="btn" href="#order">Start an Order</a>
-          <a class="btn-ghost" href="https://calendly.com/judehennigan87/supply-sourcing-call" target="_blank" rel="noopener">Book a 15-Min Call</a>
-        </div>
-        <ul class="chips">
-          <li>Factory sealed</li>
-          <li>Never activated</li>
-          <li>Volume &amp; recurring supply</li>
-          <li>Commercial invoices</li>
-        </ul>
-      </div>
-      <div class="sl-pics">
-        <img src="starlink-box.jpg" alt="Sealed Starlink Mini kit box" width="1000" height="1332">
-        <img src="starlink-dish.jpg" alt="Starlink Mini dish with kickstand" width="900" height="424" style="align-self:center">
-      </div>
+    <p class="eyebrow">Starlink Orders</p>
+    <h1 id="hero-h">Starlink kits. <span class="hl">Sealed. Never activated.</span></h1>
+    <p class="lead">New retail-channel units that activate fresh on YOUR account — no transfers, no prior owners. Stores are selling out everywhere; we keep supply moving. Single units or volume, pickup in Houston or shipped nationwide.</p>
+    <div class="cta-row">
+      <a class="btn" href="#order">Start an Order</a>
+      <a class="btn-ghost" href="https://calendly.com/judehennigan87/supply-sourcing-call" target="_blank" rel="noopener">Book a 15-Min Call</a>
+    </div>
+    <ul class="chips">
+      <li>Factory sealed</li>
+      <li>Never activated</li>
+      <li>Volume &amp; recurring supply</li>
+      <li>Commercial invoices</li>
+    </ul>
+    <div class="sl-products">
+      <article class="sl-card">
+        <img src="mini-kit.jpg" alt="Starlink Mini dish with kickstand" width="1100" height="1100" loading="lazy">
+        <h3>Starlink Mini Kit</h3>
+        <p class="sl-desc">Compact dish with built-in WiFi router. Backpack-portable, battery-friendly — RVs, boats, job sites, off-grid.</p>
+        <p class="price-line">$349.99 <span>single unit</span></p>
+        <p class="sl-vol">Volume pricing on request</p>
+      </article>
+      <article class="sl-card">
+        <img src="standard-kit.jpg" alt="Starlink Standard dish with WiFi router" width="1100" height="1100" loading="lazy">
+        <h3>Starlink Standard Kit</h3>
+        <p class="sl-desc">Full-size dish with separate WiFi router. The fixed-site workhorse — homes, shops, ranches, rural offices.</p>
+        <p class="price-line"><span>Ask availability</span></p>
+        <p class="sl-vol">Quoted per order — volume welcome</p>
+      </article>
     </div>
   </div>
 </section>
