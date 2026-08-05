@@ -291,8 +291,14 @@ html.js.anim .rv.d4{transition-delay:.18s}
 .price-line{font-size:21px;font-weight:800;color:var(--ink)}
 .price-line span{color:#35659B}
 .sl-vol{color:var(--mut);font-size:13.5px;margin-top:2px}
-.form-wrap{background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px;max-width:760px;margin:0 auto}
-.form-wrap iframe{width:100%;border:0;min-height:1500px}
+.nf-wrap{background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px 28px;max-width:820px;margin:0 auto;box-shadow:var(--shadow)}
+.nf-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 18px}
+@media(max-width:700px){.nf-grid{grid-template-columns:1fr}}
+.nf-grid label{display:block;font-size:13.5px;font-weight:700;color:var(--ink)}
+.nf-grid .nf-full{grid-column:1/-1}
+.nf-grid input,.nf-grid select,.nf-grid textarea{display:block;width:100%;margin-top:6px;padding:11px 12px;font:inherit;font-size:15px;font-weight:400;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px}
+.nf-grid input:focus,.nf-grid select:focus,.nf-grid textarea:focus{outline:2px solid var(--acc);outline-offset:1px;background:#fff}
+#nf-done{text-align:center;padding:30px 10px}
 </style>
 </head>
 <body>
@@ -337,15 +343,15 @@ html.js.anim .rv.d4{transition-delay:.18s}
         <img src="mini-kit.jpg" alt="Starlink Mini dish with kickstand" width="1100" height="1100" loading="lazy">
         <h3>Starlink Mini Kit</h3>
         <p class="sl-desc">Compact dish with built-in WiFi router. Backpack-portable, battery-friendly — RVs, boats, job sites, off-grid.</p>
-        <p class="price-line">$349.99 <span>single unit</span></p>
-        <p class="sl-vol">Volume pricing on request</p>
+        <p class="price-line">$339.99 <span>single unit</span></p>
+        <p class="sl-vol">Bulk &amp; volume discounts available</p>
       </article>
       <article class="sl-card">
         <img src="standard-kit.jpg" alt="Starlink Standard dish with WiFi router" width="1100" height="1100" loading="lazy">
         <h3>Starlink Standard Kit</h3>
         <p class="sl-desc">Full-size dish with separate WiFi router. The fixed-site workhorse — homes, shops, ranches, rural offices.</p>
-        <p class="price-line"><span>Ask availability</span></p>
-        <p class="sl-vol">Quoted per order — volume welcome</p>
+        <p class="price-line">$429.99 <span>single unit</span></p>
+        <p class="sl-vol">Bulk &amp; volume discounts available</p>
       </article>
     </div>
   </div>
@@ -355,11 +361,59 @@ html.js.anim .rv.d4{transition-delay:.18s}
   <div class="wrap">
     <p class="eyebrow" style="text-align:center">Order Request</p>
     <h2 id="ord-h" style="text-align:center">Tell us what you need.</h2>
-    <p class="sub" style="text-align:center">60 seconds. You'll hear back fast, direct from the owner.</p>
-    <div class="form-wrap">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeyMkE4RKqc5q-pFqJnwlXUnEzaBUasgkOUOfEWmXq_YaDp7Q/viewform?embedded=true" title="Starlink order request form" loading="lazy">Loading…</iframe>
+    <p class="sub" style="text-align:center;margin:0 auto 26px">Takes about a minute — who you are, what you need, and how you want it. It goes straight to the owner and you'll hear back fast, usually the same day. Bulk and volume buyers: use the same form, we quote every order personally.</p>
+    <div class="nf-wrap">
+      <form id="nf" action="https://docs.google.com/forms/d/e/1FAIpQLSeyMkE4RKqc5q-pFqJnwlXUnEzaBUasgkOUOfEWmXq_YaDp7Q/formResponse" method="POST" target="nf_sink" novalidate>
+        <div class="nf-grid">
+          <label>Full name *<input type="text" name="entry.649755270" required autocomplete="name"></label>
+          <label>Phone number *<input type="tel" name="entry.1748761673" required autocomplete="tel"></label>
+          <label>Email *<input type="email" name="entry.1441644640" required autocomplete="email"></label>
+          <label>How many units? *<input type="text" name="entry.1812076643" required inputmode="numeric" placeholder="1, 5, 25..."></label>
+          <label>Which product? *
+            <select name="entry.1396796399" required>
+              <option value="" disabled selected>Select one</option>
+              <option value="Starlink Mini Kit">Starlink Mini Kit — $339.99</option>
+              <option value="Starlink Standard Kit (ask availability)">Starlink Standard Kit — $429.99</option>
+              <option value="Accessories (mounts, power, cables)">Accessories (mounts, power, cables)</option>
+              <option value="Mix / not sure yet">Mix / not sure yet</option>
+            </select></label>
+          <label>When do you need them? *
+            <select name="entry.856904039" required>
+              <option value="" disabled selected>Select one</option>
+              <option>ASAP</option>
+              <option>Within 2 weeks</option>
+              <option>Within a month</option>
+              <option>Flexible</option>
+            </select></label>
+          <label>How are you paying? *
+            <select name="entry.1640231307" required>
+              <option value="" disabled selected>Select one</option>
+              <option value="Cash (in person)">Cash (in person)</option>
+              <option value="Card / tap to pay">Card / tap to pay</option>
+              <option value="Wire or ACH (business orders)">Wire or ACH (business orders)</option>
+              <option value="Card invoice from AllSet Supply LLC">Card invoice from AllSet Supply LLC</option>
+            </select></label>
+          <label>Pickup or delivery? *
+            <select id="nf-del" name="entry.207796787" required>
+              <option value="" disabled selected>Select one</option>
+              <option value="Pickup in Houston, TX">Pickup in Houston, TX</option>
+              <option value="Ship to me">Ship to me</option>
+            </select></label>
+          <label class="nf-full" id="nf-dest-wrap">Delivery city, state &amp; country (if shipping) *<input type="text" id="nf-dest" name="entry.325847523" required placeholder="e.g. Austin, TX, USA"></label>
+          <label class="nf-full">Business name (if ordering for a company)<input type="text" name="entry.650001244" autocomplete="organization"></label>
+          <label class="nf-full">Anything else we should know?<textarea name="entry.1586684764" rows="3"></textarea></label>
+        </div>
+        <div style="text-align:center;margin-top:20px">
+          <button class="btn" type="submit" style="border:0;font-family:inherit">Send Order Request</button>
+          <p class="cta-note" style="margin-top:12px">Direct line: <a href="tel:+18329956761">832-995-6761</a> · <a href="mailto:jude@allsetsupply.co">jude@allsetsupply.co</a></p>
+        </div>
+      </form>
+      <div id="nf-done" hidden>
+        <h3 style="font-size:22px;margin-bottom:8px">Request received. You're ALLSET. 🤝</h3>
+        <p class="sub" style="margin:0 auto">It's in the owner's hands now — expect to hear back fast, usually the same day. Need it sooner? Call or text <a href="tel:+18329956761">832-995-6761</a>.</p>
+      </div>
+      <iframe name="nf_sink" style="display:none" aria-hidden="true"></iframe>
     </div>
-    <p class="cta-note" style="text-align:center;margin-top:14px">Form not loading? <a href="https://docs.google.com/forms/d/e/1FAIpQLSeyMkE4RKqc5q-pFqJnwlXUnEzaBUasgkOUOfEWmXq_YaDp7Q/viewform" target="_blank" rel="noopener">Open it in a new tab</a> or email <a href="mailto:jude@allsetsupply.co">jude@allsetsupply.co</a>.</p>
   </div>
 </section>
 
@@ -394,6 +448,16 @@ if(b&&m)b.addEventListener('click',function(){
   var o=b.getAttribute('aria-expanded')==='true';
   b.setAttribute('aria-expanded',String(!o));
   document.getElementById('nav').classList.toggle('open',!o);
+});
+var del=document.getElementById('nf-del'),dest=document.getElementById('nf-dest'),f=document.getElementById('nf'),done=document.getElementById('nf-done'),sent=false;
+if(del&&dest)del.addEventListener('change',function(){
+  if(del.value==='Pickup in Houston, TX'){dest.value='N/A (pickup)';}
+  else if(dest.value==='N/A (pickup)'){dest.value='';}
+});
+if(f)f.addEventListener('submit',function(e){
+  if(!f.checkValidity()){e.preventDefault();f.reportValidity();return;}
+  sent=true;
+  setTimeout(function(){f.hidden=true;done.hidden=false;done.scrollIntoView({behavior:'smooth',block:'center'});},400);
 });
 })();
 </script>
